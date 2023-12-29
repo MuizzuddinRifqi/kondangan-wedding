@@ -7,6 +7,7 @@
 body {
     font-size: 1.2rem;
     font-family: 'Work Sans', sans-serif;
+    min-height: 2000px;
 }
 
 .hero::before {
@@ -16,9 +17,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://c.wallhere.com/photos/43/de/hands_wedding_rings_bouquet_roses-1031997.jpg!d');
+    background-image: url('img/wedding.jpg');
     z-index: -1;
     filter: opacity(70%) brightness(60%) contrast(100%);
+    background-size: cover;
+    background-position: center;
 }
 
 .hero {
@@ -59,9 +62,36 @@ body {
     background-color: var(--pink);
 }
 
+.mynavbar {
+    background-color: rgba(255, 255, 255, 0.3)!important;
+    backdrop-filter: blur(6px);
+
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.mynavbar .nav-link {
+    text-transform: uppercase;
+}
+
+.home {
+    background-image: url(img/bg.png);
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: -6rem;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+
 /* Media Query */
 /* Laptop */
-@media (max-width: 1199.98px) {
+@media (max-width: 992px) {
     html {
         font-size: 75%;
     }
@@ -71,7 +101,7 @@ body {
 }
 
 /* Tablet */
-@media (max-width: 991.98px) {
+@media (max-width: 768px) {
     html {
         font-size: 70%;
     }
@@ -82,7 +112,7 @@ body {
 }
 
 /* Mobile */
-@media (max-width: 767.98px) {
+@media (max-width: 600px) {
     html {
         font-size: 65%;
     }
@@ -90,4 +120,10 @@ body {
         padding: 10%;
         margin: 0%;
     }
+
+    .mynavbar .nav-link {
+        text-align: center;
+        font-size: 2rem;
+    }
+
 }
